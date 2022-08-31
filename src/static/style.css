@@ -1,0 +1,150 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgb(17,45,96);
+	background: linear-gradient(61deg, rgba(17,45,96,1) 0%, rgba(182,192,197,1) 100%);
+}
+
+.box {
+	width: 75%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	box-shadow: 2px 2px 13px 1px #000000;
+	border-radius: 15px;
+}
+
+.box1 {
+	width: 50%;
+	min-height: 500px;
+	border-radius: 15px 0 0 15px;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	background-color: rgba(161,101,51,0.34);
+}
+
+.box2 {
+	background-color: rgba(255,101,80,0.34);
+	width: 50%;
+	min-height: 500px;
+	border-radius: 0 15px 15px 0;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.item {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	letter-spacing: 2px;
+}
+
+.form div {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.form input {
+	width: 300px;
+    padding: 5px 0;
+    color: white;
+    background-color: transparent;
+    border: 0;
+    border-bottom: solid white;
+    border-bottom-width: revert;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.btn {
+	text-decoration: none;
+	color: #833ab4;
+	letter-spacing: 2px;
+	border: .5px solid #833ab4;
+	background-color: #fff;
+	padding: 5px;
+	margin: 5px;
+	position: relative;
+	transition: .5s ease-in;
+	z-index: 1;
+}
+
+.btn::before{
+	position: absolute;
+	content: '';
+	z-index: -1;
+}
+
+.btn:hover{
+	color: #fff;
+	letter-spacing: 2px;
+	border: .5px solid #fff;
+	box-shadow: inset -10.5em 0 0 0 #833ab4, inset 10.5em 0 0 0 #833ab4;
+}
+
+.button {
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	background-color: #833ab4;
+	color: #fff;
+	border: 2px solid #fff;
+	padding: 10px 60px;
+	position: relative;
+	overflow: hidden;
+	transition: color .5s;
+	transition: background-color .5s;
+	margin-top: 15px;
+}
+
+.button::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -50px;
+	width: 0;
+	height: 100%;
+	background-color: rgba(255,101,80,0.34);
+	transform: skewX(35deg);
+	z-index: -1;
+	transition: width 1s;
+}
+
+.button:hover {
+	color: #833ab4;
+	border: 2px solid #833ab4;
+	background-color: #fff;
+}
+
+.button:hover::before {
+	width: 150%;
+}

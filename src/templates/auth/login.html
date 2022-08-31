@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %} Login {% endblock title %}
+
+{% block content %}
+
+<main class="box">
+    <div class="box1">
+        <h1>Login</h1>
+        <form class="form" method="POST">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+            <div>
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username">
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-primary alert-dismissible" role="alert">
+                    <strong>{{ message }}</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" area-label="close"></button>
+                </div>
+                {% endfor %}
+                {% endif %}
+                {% endwith %}
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="Password" name="password" id="password">
+            </div>
+            <button class="button">Login</button>
+        </form>
+        <div class="item">
+            <a class="btn btn-primary" href="{{ url_for('home') }}">Pagina principal</a>
+            <a class="btn btn-primary" href="{{ url_for('auth.register') }}">Nuevo Usuario</a> 
+        </div>
+    </div>
+    <div class="box2">
+        <h1></h1>
+    </div>
+</main>
+{% endblock content %}

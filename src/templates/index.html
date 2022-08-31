@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home
+{% endblock title %}
+
+{% block content %}
+<main class="box">
+  <div class="box1">
+    <h1 style="color: black;">Bienvenido - {{ current_user.nombre }}</h1>
+    <p style="color: black;">En este proyecto es una practica del uso de:</p>
+    <p style="color: black;">Flask-Login - Flask-Migrate - Flask-SQLAlchemy - SQLAlchemy</p>
+    {% if current_user.is_authenticated %}
+    <a class="btn btn-primary" href="{{ url_for('auth.logout') }}">cerrar</a>
+    {% else %}
+    <a class="btn btn-primary" href="{{ url_for('auth.login') }}">Login</a>
+    <a class="btn btn-primary" href="{{ url_for('auth.register') }}">Register</a>
+    {% endif %}
+    <a class="btn btn-primary" href="{{ url_for('saludos') }}">Pagina protegida</a>
+    <h2>Juan Castro - 2022</h2>
+  </div>
+</main>
+{% endblock content %}

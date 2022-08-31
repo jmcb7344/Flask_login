@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}
+  saludos
+{% endblock title %}
+
+{% block content %}
+  <h1>Saludos {{ current_user.nombre }}</h1>
+  <br>
+  <hr>
+  <a class="btn btn-primary" href="{{ url_for('home') }}">Pagina principal</a>
+{% endblock content %}

@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %} Login {% endblock title %}
+
+{% block content %}
+<main class="box">
+    <div class="box1">
+        <h1></h1>
+    </div>
+    <div class="box2">
+        <h1>Register</h1>
+        <form class="form" method="POST">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+            <div>
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre">
+            </div>
+            <div>
+                <label for="email">Correo Electronico</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div>
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username">
+            </div>
+            <div>
+                <label for="password1">Password</label>
+                <input type="Password" name="password1" id="password1">
+            </div>
+            <div>
+                <label for="password2">Password</label>
+                <input type="Password" name="password2" id="password2">
+            </div>
+            <br>
+            <button type="submit" class="button">Register</button>
+        </form>
+        <div class="item">
+            <a class="btn" href="{{ url_for('home') }}">Pagina principal</a>
+        </div>
+    </div>
+</main>
+{% endblock content %}
