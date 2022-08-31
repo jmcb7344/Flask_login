@@ -23,7 +23,7 @@ Otros `$ .venv/bin/activate`
 5. - Acceder a la carpeta
 `cd src`
 6. - Crear la migracion
-`flask db init`
+`$ flask db init`
 `$ flask db migrate -m "Primera migracion`
 `$ flask db upgrade`
 7. - Ejecución: 
