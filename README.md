@@ -21,7 +21,7 @@ Otros `$ .venv/bin/activate`
 4. - Instalación de dependencias: 
 `$ pip install -r requirements.txt`
 5. - Acceder a la carpeta
-`cd src`
+`$ cd src`
 6. - Crear la migracion
 `$ flask db init`
 `$ flask db migrate -m "Primera migracion`
