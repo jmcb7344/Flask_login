@@ -8,6 +8,7 @@ Este es un proyecto de practica que sirve conocer
 - Flask-WTF
 
 ------------
+![login](https://user-images.githubusercontent.com/95278683/187572985-b9723d06-dd6c-4931-b952-295730c24646.png)
 
 ------------
 #### Descarga e instalación de la practica
@@ -28,3 +29,5 @@ Otros `$ .venv/bin/activate`
 `$ flask db upgrade`
 7. - Ejecución: 
 `$ flask run`
+------------
+![registro](https://user-images.githubusercontent.com/95278683/187573048-a80f7a05-bd08-499e-a24e-41bf2db0e97c.png)
